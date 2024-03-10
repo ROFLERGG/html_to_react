@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./css/output.css" rel="stylesheet" />
+    <script defer src="./script.js"></script>
+    <script defer src="https://kit.fontawesome.com/a8b1b63b51.js" crossorigin="anonymous"></script>
+    <title>HTML to React</title>
+  </head>
+  <body>
+    <!-- hero screen -->
+    <section class="min-h-screen flex flex-col max-md:min-h-full">
+      <header class="py-4 px-8 max-md:py-2 max-md:px-4">
+        <div class="flex justify-between items-center max-lg:hidden">
+          <div class="flex-1"></div>
+          <div class="flex flex-1 justify-center items-center space-x-6">
+            <a href="">Find Jobs</a>
+            <a href="">For Companies</a>
+          </div>
+          <div class="flex flex-1 justify-end items-center space-x-6">
+            <button>Sign In</button>
+            <button class="py-2 px-7 border border-black rounded shadow-btn active:shadow-none transition-shadow">Sign up Free</button>
+          </div>
+        </div>
+        <div class="lg:hidden flex justify-end">
+          <button class="flex flex-col justify-center space-y-1 w-14 h-14 p-3">
+            <div class="w-full h-0.5 rounded-full bg-black"></div>
+            <div class="w-full h-0.5 rounded-full bg-black"></div>
+            <div class="w-full h-0.5 rounded-full bg-black"></div>
+          </button>
+        </div>
+      </header>
+      <div class="relative flex-1 flex flex-col justify-center z-10 max-md:flex-none max-md:py-[120px]">
+        <div class="container">
+          <div class="w-fit flex flex-1 flex-col justify-center items-center space-y-6 mx-auto max-lg:items-start">
+            <div class="flex flex-col w-fit space-x-56 whitespace-nowrap font-roboto max-lg:space-x-0">
+              <h2 class="text-10xl max-xl:text-8xl max-sm:text-5xl leading-none">Land a job</h2>
+              <h2 class="text-10xl max-xl:text-8xl max-sm:text-5xl leading-none">the easy way</h2>
+            </div>
+            <div class="flex w-full justify-center max-md:justify-start">
+              <div class="flex flex-col items-start space-y-12 max-md:space-y-6">
+                <h2 class="text-2xl max-md:text-xl">
+                  The best place to discover & apply to the coolest <br />
+                  start up jobs, without the black box.
+                </h2>
+                <div class="flex justify-between space-x-6 w-full max-sm:flex-col max-sm:space-x-0 max-sm:space-y-6">
+                  <input class="px-6 py-3 w-full border border-black rounded outline-none" />
+                  <a href="" class="w-fit bg-yellow-300 py-2 px-12 font-work flex items-center rounded border border-black">Explore</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute -z-10 bottom-0 inset-x-0 w-full h-full bg-[url('/img/image1.png')] bg-no-repeat bg-center bg-cover"></div>
+      </div>
+    </section>
+    <!-- second screen -->
+    <section class="py-[120px] max-md:py-[60px] bg-neutral-950">
+      <div class="container">
+        <div class="flex flex-col space-y-[120px] max-md:space-y-[60px]">
+          <h2 class="font-roboto text-6xl text-white max-md:text-5xl">
+            Your new path <br />
+            to hired.
+          </h2>
+          <div class="flex space-x-12 max-md:flex-col max-md:space-x-0 max-md:space-y-12">
+            <!-- item-1 -->
+            <div class="flex flex-col space-y-6 flex-1">
+              <div class="w-14 h-14 bg-neutral-400"></div>
+              <div class="flex flex-col space-y-3">
+                <h2 class="text-2xl text-white font-roboto">Apply to humans</h2>
+                <p class="text-white">72% of applications are never seen by a human! With parallel you skip the line and go direct to the hiring team.</p>
+              </div>
+            </div>
+            <!-- item-1 -->
+            <div class="flex flex-col space-y-6 flex-1">
+              <div class="w-14 h-14 bg-neutral-400"></div>
+              <div class="flex flex-col space-y-3">
+                <h2 class="text-2xl text-white font-roboto">Instantly stand out</h2>
+                <p class="text-white">Showcase your projects, passions and work ethos with Parallel Profile to stand out from the crowd.</p>
+              </div>
+            </div>
+            <!-- item-1 -->
+            <div class="flex flex-col space-y-6 flex-1">
+              <div class="w-14 h-14 bg-neutral-400"></div>
+              <div class="flex flex-col space-y-3">
+                <h2 class="text-2xl text-white font-roboto">Real time feedback</h2>
+                <p class="text-white">Don't get ghosted! Get feedback & notifications with every application, so that you’re never left wondering.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- third screen -->
+    <section class="py-[60px] max-md:pb-[30px]">
+      <div class="container">
+        <div class="flex flex-col space-y-[120px] max-lg:space-y-[60px]">
+          <!-- Trending jobs -->
+          <div class="flex flex-col space-y-6">
+            <div class="flex justify-between items-end font-roboto">
+              <h2 class="text-3xl">Trending jobs</h2>
+              <a href="" class="text-lg hover:underline hover:underline-offset-2">View all</a>
+            </div>
+            <div dir="ltr" class="flex flex-nowrap space-x-6 snap-mandatory snap-x overflow-x-hidden max-lg:overflow-x-auto">
+              <!-- card -->
+              <div class="shrink-0 snap-start flex flex-col max-w-[300px] p-6 rounded-lg border border-black space-y-3">
+                <!-- heading -->
+                <div class="flex justify-between items-start">
+                  <div class="w-12 h-12 bg-neutral-400 rounded"></div>
+                  <div class="w-6 h-6 bg-neutral-400"></div>
+                </div>
+                <!-- title -->
+                <h2 class="text-xl">Product Manager (Operations)</h2>
+                <!-- info -->
+                <div class="flex flex-col space-y-3">
+                  <div class="flex items-center space-x-3 text-sm">
+                    <span>Breef</span>
+                    <div class="w-0.5 h-0.5 bg-black"></div>
+                    <span>New York or Remote</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="flex -space-x-1">
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <!-- can be hidden -->
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <!-- if blocks above more than 3 -->
+                      <div class="hidden w-6 h-6 bg-violet-400 ring-2 ring-white justify-center items-center text-sm">+1</div>
+                    </div>
+                    <p>Active Employees</p>
+                  </div>
+                  <button class="py-2 px-7 border border-black rounded shadow-btn active:shadow-none transition-shadow">Apply Direct</button>
+                </div>
+              </div>
+              <!-- card -->
+              <div class="shrink-0 snap-start flex flex-col max-w-[300px] p-6 rounded-lg border border-black space-y-3">
+                <!-- heading -->
+                <div class="flex justify-between items-start">
+                  <div class="w-12 h-12 bg-neutral-400 rounded"></div>
+                  <div class="w-6 h-6 bg-neutral-400"></div>
+                </div>
+                <!-- title -->
+                <h2 class="text-xl">Product Manager (Operations)</h2>
+                <!-- info -->
+                <div class="flex flex-col space-y-3">
+                  <div class="flex items-center space-x-3 text-sm">
+                    <span>Breef</span>
+                    <div class="w-0.5 h-0.5 bg-black"></div>
+                    <span>New York or Remote</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="flex -space-x-1">
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <!-- can be hidden -->
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <!-- if blocks above more than 3 -->
+                      <div class="hidden w-6 h-6 bg-violet-400 ring-2 ring-white justify-center items-center text-sm">+1</div>
+                    </div>
+                    <p>Active Employees</p>
+                  </div>
+                  <button class="py-2 px-7 border border-black rounded shadow-btn active:shadow-none transition-shadow">Apply Direct</button>
+                </div>
+              </div>
+              <!-- card -->
+              <div class="shrink-0 snap-start flex flex-col max-w-[300px] p-6 rounded-lg border border-black space-y-3">
+                <!-- heading -->
+                <div class="flex justify-between items-start">
+                  <div class="w-12 h-12 bg-neutral-400 rounded"></div>
+                  <div class="w-6 h-6 bg-neutral-400"></div>
+                </div>
+                <!-- title -->
+                <h2 class="text-xl">Product Manager (Operations)</h2>
+                <!-- info -->
+                <div class="flex flex-col space-y-3">
+                  <div class="flex items-center space-x-3 text-sm">
+                    <span>Breef</span>
+                    <div class="w-0.5 h-0.5 bg-black"></div>
+                    <span>New York or Remote</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="flex -space-x-1">
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <!-- can be hidden -->
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <!-- if blocks above more than 3 -->
+                      <div class="hidden w-6 h-6 bg-violet-400 ring-2 ring-white justify-center items-center text-sm">+1</div>
+                    </div>
+                    <p>Active Employees</p>
+                  </div>
+                  <button class="py-2 px-7 border border-black rounded shadow-btn active:shadow-none transition-shadow">Apply Direct</button>
+                </div>
+              </div>
+              <!-- card -->
+              <div class="shrink-0 snap-start flex flex-col max-w-[300px] p-6 rounded-lg border border-black space-y-3">
+                <!-- heading -->
+                <div class="flex justify-between items-start">
+                  <div class="w-12 h-12 bg-neutral-400 rounded"></div>
+                  <div class="w-6 h-6 bg-neutral-400"></div>
+                </div>
+                <!-- title -->
+                <h2 class="text-xl">Product Manager (Operations)</h2>
+                <!-- info -->
+                <div class="flex flex-col space-y-3">
+                  <div class="flex items-center space-x-3 text-sm">
+                    <span>Breef</span>
+                    <div class="w-0.5 h-0.5 bg-black"></div>
+                    <span>New York or Remote</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="flex -space-x-1">
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <!-- can be hidden -->
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <!-- if blocks above more than 3 -->
+                      <div class="hidden w-6 h-6 bg-violet-400 ring-2 ring-white justify-center items-center text-sm">+1</div>
+                    </div>
+                    <p>Active Employees</p>
+                  </div>
+                  <button class="py-2 px-7 border border-black rounded shadow-btn active:shadow-none transition-shadow">Apply Direct</button>
+                </div>
+              </div>
+              <!-- card -->
+              <div class="shrink-0 snap-start flex flex-col max-w-[300px] p-6 rounded-lg border border-black space-y-3">
+                <!-- heading -->
+                <div class="flex justify-between items-start">
+                  <div class="w-12 h-12 bg-neutral-400 rounded"></div>
+                  <div class="w-6 h-6 bg-neutral-400"></div>
+                </div>
+                <!-- title -->
+                <h2 class="text-xl">Product Manager (Operations)</h2>
+                <!-- info -->
+                <div class="flex flex-col space-y-3">
+                  <div class="flex items-center space-x-3 text-sm">
+                    <span>Breef</span>
+                    <div class="w-0.5 h-0.5 bg-black"></div>
+                    <span>New York or Remote</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="flex -space-x-1">
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <!-- can be hidden -->
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <!-- if blocks above more than 3 -->
+                      <div class="hidden w-6 h-6 bg-violet-400 ring-2 ring-white justify-center items-center text-sm">+1</div>
+                    </div>
+                    <p>Active Employees</p>
+                  </div>
+                  <button class="py-2 px-7 border border-black rounded shadow-btn active:shadow-none transition-shadow">Apply Direct</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Top Companies -->
+          <div class="flex flex-col space-y-6">
+            <div class="flex justify-between items-end font-roboto">
+              <h2 class="text-3xl">Top Companies</h2>
+              <a href="" class="text-lg hover:underline hover:underline-offset-2">View all</a>
+            </div>
+            <div dir="ltr" class="flex flex-nowrap space-x-6 snap-mandatory snap-x overflow-x-hidden max-lg:overflow-x-auto">
+              <!-- card -->
+              <div class="shrink-0 snap-start flex flex-col max-w-[300px] rounded-lg border border-black">
+                <!-- heading -->
+                <div class="bg-neutral-400 w-full h-24 rounded-t-lg"></div>
+                <!-- info -->
+                <div class="p-6 flex flex-col space-y-3">
+                  <!-- title -->
+                  <h2 class="text-xl">Webflow</h2>
+                  <div class="flex items-center space-x-3 text-sm">
+                    <span>Manufacturing</span>
+                    <div class="w-0.5 h-0.5 bg-black"></div>
+                    <span>San Francisco, CA</span>
+                  </div>
+                  <p>2 Open positions</p>
+                  <div class="flex items-center space-x-3">
+                    <div class="flex -space-x-1">
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <!-- can be hidden -->
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <!-- if blocks above more than 3 -->
+                      <div class="hidden w-6 h-6 bg-violet-400 ring-2 ring-white justify-center items-center text-sm">+1</div>
+                    </div>
+                    <p>Active Employees</p>
+                  </div>
+                  <button class="py-2 px-7 border border-black rounded shadow-btn active:shadow-none transition-shadow">Browse Jobs</button>
+                </div>
+              </div>
+              <!-- card -->
+              <div class="shrink-0 snap-start flex flex-col max-w-[300px] rounded-lg border border-black">
+                <!-- heading -->
+                <div class="bg-neutral-400 w-full h-24 rounded-t-lg"></div>
+                <!-- info -->
+                <div class="p-6 flex flex-col space-y-3">
+                  <!-- title -->
+                  <h2 class="text-xl">Webflow</h2>
+                  <div class="flex items-center space-x-3 text-sm">
+                    <span>Manufacturing</span>
+                    <div class="w-0.5 h-0.5 bg-black"></div>
+                    <span>San Francisco, CA</span>
+                  </div>
+                  <p>2 Open positions</p>
+                  <div class="flex items-center space-x-3">
+                    <div class="flex -space-x-1">
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <!-- can be hidden -->
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <!-- if blocks above more than 3 -->
+                      <div class="hidden w-6 h-6 bg-violet-400 ring-2 ring-white justify-center items-center text-sm">+1</div>
+                    </div>
+                    <p>Active Employees</p>
+                  </div>
+                  <button class="py-2 px-7 border border-black rounded shadow-btn active:shadow-none transition-shadow">Browse Jobs</button>
+                </div>
+              </div>
+              <!-- card -->
+              <div class="shrink-0 snap-start flex flex-col max-w-[300px] rounded-lg border border-black">
+                <!-- heading -->
+                <div class="bg-neutral-400 w-full h-24 rounded-t-lg"></div>
+                <!-- info -->
+                <div class="p-6 flex flex-col space-y-3">
+                  <!-- title -->
+                  <h2 class="text-xl">Webflow</h2>
+                  <div class="flex items-center space-x-3 text-sm">
+                    <span>Manufacturing</span>
+                    <div class="w-0.5 h-0.5 bg-black"></div>
+                    <span>San Francisco, CA</span>
+                  </div>
+                  <p>2 Open positions</p>
+                  <div class="flex items-center space-x-3">
+                    <div class="flex -space-x-1">
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <!-- can be hidden -->
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <!-- if blocks above more than 3 -->
+                      <div class="hidden w-6 h-6 bg-violet-400 ring-2 ring-white justify-center items-center text-sm">+1</div>
+                    </div>
+                    <p>Active Employees</p>
+                  </div>
+                  <button class="py-2 px-7 border border-black rounded shadow-btn active:shadow-none transition-shadow">Browse Jobs</button>
+                </div>
+              </div>
+              <!-- card -->
+              <div class="shrink-0 snap-start flex flex-col max-w-[300px] rounded-lg border border-black">
+                <!-- heading -->
+                <div class="bg-neutral-400 w-full h-24 rounded-t-lg"></div>
+                <!-- info -->
+                <div class="p-6 flex flex-col space-y-3">
+                  <!-- title -->
+                  <h2 class="text-xl">Webflow</h2>
+                  <div class="flex items-center space-x-3 text-sm">
+                    <span>Manufacturing</span>
+                    <div class="w-0.5 h-0.5 bg-black"></div>
+                    <span>San Francisco, CA</span>
+                  </div>
+                  <p>2 Open positions</p>
+                  <div class="flex items-center space-x-3">
+                    <div class="flex -space-x-1">
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <!-- can be hidden -->
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <!-- if blocks above more than 3 -->
+                      <div class="hidden w-6 h-6 bg-violet-400 ring-2 ring-white justify-center items-center text-sm">+1</div>
+                    </div>
+                    <p>Active Employees</p>
+                  </div>
+                  <button class="py-2 px-7 border border-black rounded shadow-btn active:shadow-none transition-shadow">Browse Jobs</button>
+                </div>
+              </div>
+              <!-- card -->
+              <div class="shrink-0 snap-start flex flex-col max-w-[300px] rounded-lg border border-black">
+                <!-- heading -->
+                <div class="bg-neutral-400 w-full h-24 rounded-t-lg"></div>
+                <!-- info -->
+                <div class="p-6 flex flex-col space-y-3">
+                  <!-- title -->
+                  <h2 class="text-xl">Webflow</h2>
+                  <div class="flex items-center space-x-3 text-sm">
+                    <span>Manufacturing</span>
+                    <div class="w-0.5 h-0.5 bg-black"></div>
+                    <span>San Francisco, CA</span>
+                  </div>
+                  <p>2 Open positions</p>
+                  <div class="flex items-center space-x-3">
+                    <div class="flex -space-x-1">
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <!-- can be hidden -->
+                      <div class="w-6 h-6 bg-neutral-400 ring-2 ring-white"></div>
+                      <!-- if blocks above more than 3 -->
+                      <div class="hidden w-6 h-6 bg-violet-400 ring-2 ring-white justify-center items-center text-sm">+1</div>
+                    </div>
+                    <p>Active Employees</p>
+                  </div>
+                  <button class="py-2 px-7 border border-black rounded shadow-btn active:shadow-none transition-shadow">Browse Jobs</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- fourth -->
+    <section class="py-[60px] max-md:pt-[30px]">
+      <div class="container">
+        <div class="flex flex-col space-y-[120px] max-lg:space-y-[60px]">
+          <!-- Find your culture -->
+          <div class="flex flex-col space-y-6">
+            <h2 class="text-3xl font-roboto">Find your culture</h2>
+            <!-- tags -->
+            <div class="flex flex-wrap gap-3">
+              <a href="" class="border border-black rounded-lg px-6 py-3 text-lg hover:bg-black hover:text-white duration-150 ease-in-out">Adventurous</a>
+              <a href="" class="border border-black rounded-lg px-6 py-3 text-lg hover:bg-black hover:text-white duration-150 ease-in-out">Autonomous</a>
+              <a href="" class="border border-black rounded-lg px-6 py-3 text-lg hover:bg-black hover:text-white duration-150 ease-in-out">Bold</a>
+              <a href="" class="border border-black rounded-lg px-6 py-3 text-lg hover:bg-black hover:text-white duration-150 ease-in-out">Collaborative</a>
+              <a href="" class="border border-black rounded-lg px-6 py-3 text-lg hover:bg-black hover:text-white duration-150 ease-in-out">Curious</a>
+              <a href="" class="border border-black rounded-lg px-6 py-3 text-lg hover:bg-black hover:text-white duration-150 ease-in-out">Design Driven</a>
+              <a href="" class="border border-black rounded-lg px-6 py-3 text-lg hover:bg-black hover:text-white duration-150 ease-in-out">Ego-Free</a>
+              <a href="" class="border border-black rounded-lg px-6 py-3 text-lg hover:bg-black hover:text-white duration-150 ease-in-out">Empathetic</a>
+              <a href="" class="border border-black rounded-lg px-6 py-3 text-lg hover:bg-black hover:text-white duration-150 ease-in-out">Empowering</a>
+              <a href="" class="border border-black rounded-lg px-6 py-3 text-lg hover:bg-black hover:text-white duration-150 ease-in-out">Entrepreneurial</a>
+              <a href="" class="border border-black rounded-lg px-6 py-3 text-lg hover:bg-black hover:text-white duration-150 ease-in-out">Fast Paced</a>
+              <a href="" class="border border-black rounded-lg px-6 py-3 text-lg hover:bg-black hover:text-white duration-150 ease-in-out">Focused</a>
+              <a href="" class="border border-black rounded-lg px-6 py-3 text-lg hover:bg-black hover:text-white duration-150 ease-in-out">Forward Thinking</a>
+              <a href="" class="border border-black rounded-lg px-6 py-3 text-lg hover:bg-black hover:text-white duration-150 ease-in-out">Inclusive</a>
+              <a href="" class="border border-black rounded-lg px-6 py-3 text-lg hover:bg-black hover:text-white duration-150 ease-in-out">Purposeful</a>
+            </div>
+          </div>
+          <!-- Browse Collections -->
+          <div class="flex flex-col space-y-6">
+            <div class="flex justify-between items-end font-roboto">
+              <h2 class="text-3xl">Browse Collections</h2>
+              <a href="" class="text-lg hover:underline hover:underline-offset-2 whitespace-nowrap">View all</a>
+            </div>
+            <div class="grid grid-cols-3 gap-6 max-lg:grid-cols-2 max-sm:grid-cols-1">
+              <!-- card -->
+              <a href="" class="rounded-lg border border-black">
+                <!-- heading -->
+                <div class="bg-neutral-400 w-full h-44 rounded-t-lg"></div>
+                <!-- info -->
+                <div class="p-6 flex justify-between items-center">
+                  <div class="flex flex-col space-y-3">
+                    <!-- title -->
+                    <h2 class="text-2xl">Women Led</h2>
+                    <div class="flex items-center space-x-3">
+                      <span>5 Companies</span>
+                      <div class="w-0.5 h-0.5 bg-black"></div>
+                      <span>1 Jobs</span>
+                    </div>
+                  </div>
+                  <div class="w-12 h-12 border border-black flex justify-center items-center hover:bg-black hover:text-white duration-150 ease-in-out">
+                    <i class="fa-solid fa-plus fa-xl"></i>
+                  </div>
+                </div>
+              </a>
+              <!-- card -->
+              <a href="" class="rounded-lg border border-black">
+                <!-- heading -->
+                <div class="bg-neutral-400 w-full h-44 rounded-t-lg"></div>
+                <!-- info -->
+                <div class="p-6 flex justify-between items-center">
+                  <div class="flex flex-col space-y-3">
+                    <!-- title -->
+                    <h2 class="text-2xl">Wellness</h2>
+                    <div class="flex items-center space-x-3">
+                      <span>3 Companies</span>
+                      <div class="w-0.5 h-0.5 bg-black"></div>
+                      <span>1 Jobs</span>
+                    </div>
+                  </div>
+                  <div class="w-12 h-12 border border-black flex justify-center items-center hover:bg-black hover:text-white duration-150 ease-in-out">
+                    <i class="fa-solid fa-plus fa-xl"></i>
+                  </div>
+                </div>
+              </a>
+              <!-- card -->
+              <a href="" class="rounded-lg border border-black max-sm:hidden">
+                <!-- heading -->
+                <div class="bg-neutral-400 w-full h-44 rounded-t-lg"></div>
+                <!-- info -->
+                <div class="p-6 flex justify-between items-center">
+                  <div class="flex flex-col space-y-3">
+                    <!-- title -->
+                    <h2 class="text-2xl">Web 3</h2>
+                    <div class="flex items-center space-x-3">
+                      <span>2 Companies</span>
+                      <div class="w-0.5 h-0.5 bg-black"></div>
+                      <span>5 Jobs</span>
+                    </div>
+                  </div>
+                  <div class="w-12 h-12 border border-black flex justify-center items-center hover:bg-black hover:text-white duration-150 ease-in-out">
+                    <i class="fa-solid fa-plus fa-xl"></i>
+                  </div>
+                </div>
+              </a>
+              <!-- card -->
+              <a href="" class="rounded-lg border border-black max-sm:hidden">
+                <!-- heading -->
+                <div class="bg-neutral-400 w-full h-44 rounded-t-lg"></div>
+                <!-- info -->
+                <div class="p-6 flex justify-between items-center">
+                  <div class="flex flex-col space-y-3">
+                    <!-- title -->
+                    <h2 class="text-2xl">Music Tech</h2>
+                    <div class="flex items-center space-x-3">
+                      <span>1 Companies</span>
+                      <div class="w-0.5 h-0.5 bg-black"></div>
+                      <span>1 Jobs</span>
+                    </div>
+                  </div>
+                  <div class="w-12 h-12 border border-black flex justify-center items-center hover:bg-black hover:text-white duration-150 ease-in-out">
+                    <i class="fa-solid fa-plus fa-xl"></i>
+                  </div>
+                </div>
+              </a>
+              <!-- card -->
+              <a href="" class="rounded-lg border border-black max-lg:hidden">
+                <!-- heading -->
+                <div class="bg-neutral-400 w-full h-44 rounded-t-lg"></div>
+                <!-- info -->
+                <div class="p-6 flex justify-between items-center">
+                  <div class="flex flex-col space-y-3">
+                    <!-- title -->
+                    <h2 class="text-2xl">Marketplaces</h2>
+                    <div class="flex items-center space-x-3">
+                      <span>2 Companies</span>
+                      <div class="w-0.5 h-0.5 bg-black"></div>
+                      <span>17 Jobs</span>
+                    </div>
+                  </div>
+                  <div class="w-12 h-12 border border-black flex justify-center items-center hover:bg-black hover:text-white duration-150 ease-in-out">
+                    <i class="fa-solid fa-plus fa-xl"></i>
+                  </div>
+                </div>
+              </a>
+              <!-- card -->
+              <a href="" class="rounded-lg border border-black max-lg:hidden">
+                <!-- heading -->
+                <div class="bg-neutral-400 w-full h-44 rounded-t-lg"></div>
+                <!-- info -->
+                <div class="p-6 flex justify-between items-center">
+                  <div class="flex flex-col space-y-3">
+                    <!-- title -->
+                    <h2 class="text-2xl">Giving Back</h2>
+                    <div class="flex items-center space-x-3">
+                      <span>1 Companies</span>
+                      <div class="w-0.5 h-0.5 bg-black"></div>
+                      <span>1 Jobs</span>
+                    </div>
+                  </div>
+                  <div class="w-12 h-12 border border-black flex justify-center items-center hover:bg-black hover:text-white duration-150 ease-in-out">
+                    <i class="fa-solid fa-plus fa-xl"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Get started -->
+          <div class="flex flex-col space-y-6">
+            <h2 class="text-4xl font-roboto mx-auto">It’s simple to get started</h2>
+            <div class="flex justify-between items-center space-x-[120px]">
+              <div class="flex flex-col flex-1 space-y-6">
+                <!-- radio buttons -->
+                <div>
+                  <input type="radio" name="btns" id="btn1" value="1" class="tab peer hidden" checked />
+                  <label for="btn1" class="flex items-center rounded-xl p-8 transition-shadow duration-150 ease-in-out cursor-pointer peer-checked:btn-active">
+                    <div class="flex space-x-3">
+                      <div class="flex justify-center items-center w-8 h-8 rounded-lg border border-black bg-yellow-300 transition-colors duration-150 ease-in-out font-roboto">1</div>
+                      <p class="text-xl">Build your new profile</p>
+                    </div>
+                  </label>
+                </div>
+                <div>
+                  <input type="radio" name="btns" id="btn2" value="2" class="tab peer hidden" />
+                  <label for="btn2" class="flex items-center rounded-xl p-8 transition-shadow duration-150 ease-in-out cursor-pointer peer-checked:btn-active">
+                    <div class="flex space-x-3">
+                      <div class="flex justify-center items-center w-8 h-8 rounded-lg border border-black bg-yellow-300 transition-colors duration-150 ease-in-out font-roboto">2</div>
+                      <p class="text-xl">Discover jobs you love</p>
+                    </div>
+                  </label>
+                </div>
+                <div>
+                  <input type="radio" name="btns" id="btn3" value="3" class="tab peer hidden" />
+                  <label for="btn3" class="flex items-center rounded-xl p-8 transition-shadow duration-150 ease-in-out cursor-pointer peer-checked:btn-active">
+                    <div class="flex space-x-3">
+                      <div class="flex justify-center items-center w-8 h-8 rounded-lg border border-black bg-yellow-300 transition-colors duration-150 ease-in-out font-roboto">3</div>
+                      <p class="text-xl">Apply direct to teams</p>
+                    </div>
+                  </label>
+                </div>
+                <div>
+                  <input type="radio" name="btns" id="btn4" value="4" class="tab peer hidden" />
+                  <label for="btn4" class="flex items-center rounded-xl p-8 transition-shadow duration-150 ease-in-out cursor-pointer peer-checked:btn-active">
+                    <div class="flex space-x-3">
+                      <div class="flex justify-center items-center w-8 h-8 rounded-lg border border-black bg-yellow-300 transition-colors duration-150 ease-in-out font-roboto">4</div>
+                      <p class="text-xl">Get quick feedback</p>
+                    </div>
+                  </label>
+                </div>
+                <div>
+                  <input type="radio" name="btns" id="btn5" value="5" class="tab peer hidden" />
+                  <label for="btn5" class="flex items-center rounded-xl p-8 transition-shadow duration-150 ease-in-out cursor-pointer peer-checked:btn-active">
+                    <div class="flex space-x-3">
+                      <div class="flex justify-center items-center w-8 h-8 rounded-lg border border-black bg-yellow-300 transition-colors duration-150 ease-in-out font-roboto">5</div>
+                      <p class="text-xl">Land interviews quicker</p>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <!-- video -->
+              <div class="flex-[2] flex justify-end">
+                <!-- video 1 -->
+                <div class="tab-content w-[768px] h-[432px] border border-black rounded-xl bg-neutral-400 flex items-center justify-center text-4xl">1</div>
+                <!-- video 2 -->
+                <div class="tab-content w-[768px] h-[432px] border border-black rounded-xl bg-neutral-400 hidden items-center justify-center text-4xl">2</div>
+                <!-- video 3 -->
+                <div class="tab-content w-[768px] h-[432px] border border-black rounded-xl bg-neutral-400 hidden items-center justify-center text-4xl">3</div>
+                <!-- video 4 -->
+                <div class="tab-content w-[768px] h-[432px] border border-black rounded-xl bg-neutral-400 hidden items-center justify-center text-4xl">4</div>
+                <!-- video 5 -->
+                <div class="tab-content w-[768px] h-[432px] border border-black rounded-xl bg-neutral-400 hidden items-center justify-center text-4xl">5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- fifth -->
+    <section class="py-[60px] bg-neutral-950">
+      <div class="container">
+        <div class="flex flex-col space-y-10">
+          <h2 class="text-4xl font-roboto text-white mx-auto">FAQs</h2>
+          <div class="flex flex-col space-y-3">
+            <div class="flex flex-col space-y-3">
+              <!-- faq buttons -->
+              <div class="relative">
+                <input type="checkbox" name="faq" id="faq-btn1" class="peer/faq hidden" />
+                <label for="faq-btn1" class="bg-neutral-800 flex justify-between items-center py-8 px-10 select-none rounded-lg cursor-pointer text-left text-lg text-white peer-checked/faq:rounded-b-none peer-checked/faq:pb-0">
+                  Why Parallel over Linkedin Jobs, or Zip Recruiter?
+                  <div class="absolute right-10 peer-checked/faq:rotate-90">
+                    <i class="fa-solid fa-chevron-down"> </i>
+                  </div>
+                </label>
+                <div class="bg-neutral-800 hidden peer-checked/faq:block rounded-b-lg px-10 py-8 text-lg text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolor voluptatibus ipsa, magnam nemo, eius illum architecto error facere accusamus, asperiores repudiandae. Dolorum corrupti quidem animi nihil cum iure exercitationem?</div>
+              </div>
+              <div class="relative">
+                <input type="checkbox" name="faq" id="faq-btn2" class="peer/faq hidden" />
+                <label for="faq-btn2" class="bg-neutral-800 flex justify-between items-center py-8 px-10 select-none rounded-lg cursor-pointer text-left text-lg text-white peer-checked/faq:rounded-b-none peer-checked/faq:pb-0">
+                  What types of jobs are on Parallel?
+                  <div class="absolute right-10 peer-checked/faq:rotate-90">
+                    <i class="fa-solid fa-chevron-down"> </i>
+                  </div>
+                </label>
+                <div class="bg-neutral-800 hidden peer-checked/faq:block rounded-b-lg px-10 py-8 text-lg text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolor voluptatibus ipsa, magnam nemo, eius illum architecto error facere accusamus, asperiores repudiandae. Dolorum corrupti quidem animi nihil cum iure exercitationem?</div>
+              </div>
+              <div class="relative">
+                <input type="checkbox" name="faq" id="faq-btn3" class="peer/faq hidden" />
+                <label for="faq-btn3" class="bg-neutral-800 flex justify-between items-center py-8 px-10 select-none rounded-lg cursor-pointer text-left text-lg text-white peer-checked/faq:rounded-b-none peer-checked/faq:pb-0">
+                  What does apply direct or get referred mean?
+                  <div class="absolute right-10 peer-checked/faq:rotate-90">
+                    <i class="fa-solid fa-chevron-down"> </i>
+                  </div>
+                </label>
+                <div class="bg-neutral-800 hidden peer-checked/faq:block rounded-b-lg px-10 py-8 text-lg text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolor voluptatibus ipsa, magnam nemo, eius illum architecto error facere accusamus, asperiores repudiandae. Dolorum corrupti quidem animi nihil cum iure exercitationem?</div>
+              </div>
+              <div class="relative">
+                <input type="checkbox" name="faq" id="faq-btn4" class="peer/faq hidden" />
+                <label for="faq-btn4" class="bg-neutral-800 flex justify-between items-center py-8 px-10 select-none rounded-lg cursor-pointer text-left text-lg text-white peer-checked/faq:rounded-b-none peer-checked/faq:pb-0">
+                  Is Parallel free?
+                  <div class="absolute right-10 peer-checked/faq:rotate-90">
+                    <i class="fa-solid fa-chevron-down"> </i>
+                  </div>
+                </label>
+                <div class="bg-neutral-800 hidden peer-checked/faq:block rounded-b-lg px-10 py-8 text-lg text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolor voluptatibus ipsa, magnam nemo, eius illum architecto error facere accusamus, asperiores repudiandae. Dolorum corrupti quidem animi nihil cum iure exercitationem?</div>
+              </div>
+              <div class="relative">
+                <input type="checkbox" name="faq" id="faq-btn5" class="peer/faq hidden" />
+                <label for="faq-btn5" class="bg-neutral-800 flex justify-between items-center py-8 px-10 select-none rounded-lg cursor-pointer text-left text-lg text-white peer-checked/faq:rounded-b-none peer-checked/faq:pb-0">
+                  Do I submit my resume or profile?
+                  <div class="absolute right-10 peer-checked/faq:rotate-90">
+                    <i class="fa-solid fa-chevron-down"> </i>
+                  </div>
+                </label>
+                <div class="bg-neutral-800 hidden peer-checked/faq:block rounded-b-lg px-10 py-8 text-lg text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolor voluptatibus ipsa, magnam nemo, eius illum architecto error facere accusamus, asperiores repudiandae. Dolorum corrupti quidem animi nihil cum iure exercitationem?</div>
+              </div>
+              <div class="relative">
+                <input type="checkbox" name="faq" id="faq-btn6" class="peer/faq hidden" />
+                <label for="faq-btn6" class="bg-neutral-800 flex justify-between items-center py-8 px-10 select-none rounded-lg cursor-pointer text-left text-lg text-white peer-checked/faq:rounded-b-none peer-checked/faq:pb-0">
+                  Will more companies & jobs be added?
+                  <div class="absolute right-10 peer-checked/faq:rotate-90">
+                    <i class="fa-solid fa-chevron-down"> </i>
+                  </div>
+                </label>
+                <div class="bg-neutral-800 hidden peer-checked/faq:block rounded-b-lg px-10 py-8 text-lg text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolor voluptatibus ipsa, magnam nemo, eius illum architecto error facere accusamus, asperiores repudiandae. Dolorum corrupti quidem animi nihil cum iure exercitationem?</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-[160px] relative">
+      <div class="container">
+        <div class="flex flex-col items-center space-y-6 w-fit mx-auto">
+          <h2 class="text-8xl font-roboto">Your one stop job shop.</h2>
+          <p class="text-2xl">Join to apply to 100’s of the best start up jobs.</p>
+          <div class="flex max-w-[600px] w-full space-x-6 whitespace-nowrap max-md:flex-col max-md:space-x-0 max-md:space-y-6">
+            <button class="py-2 px-7 bg-yellow-300 border border-black rounded shadow-btn active:shadow-none transition-shadow grow flex-1">Start for free</button>
+            <button class="py-2 px-7 relative border border-black rounded grow flex-1">
+              Join as a company
+              <div class="absolute h-full w-full top-[5px] left-[5px] border border-black rounded"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="absolute -z-10 bottom-0 inset-x-0 w-full h-full bg-[url('/img/image2.png')] bg-no-repeat bg-center bg-cover"></div>
+    </section>
+  </body>
+</html>
